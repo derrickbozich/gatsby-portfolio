@@ -1,37 +1,37 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Img from "gatsby-image"
 
 export default ({ data }) => {
   let post = data.markdownRemark
-  console.log(JSON.stringify(post, null, 2))
 
-  let featuredImgFluid = post.frontmatter.featuredImage
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
-
-  // <h1>{post.frontmatter.title}</h1>
-  //
-  // <div dangerouslySetInnerHTML={{ __html: post.html }} />
-  //  <Img fluid={featuredImgFluid} />
   return (
     <Layout>
       <div>
+        <h1>{post.frontmatter.title}</h1>
+        <Img fluid={featuredImgFluid} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-         <Image fileName={featuredImgFluid} />
-
       </div>
     </Layout>
   )
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
-        featuredImage
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

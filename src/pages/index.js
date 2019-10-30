@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -17,7 +18,14 @@ const IndexPage = () => {
             frontmatter {
               title
               date(formatString: "DD MMMM, YYYY")
-              featuredImage
+              featuredImage {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+
             }
             excerpt
             fields {
@@ -28,6 +36,8 @@ const IndexPage = () => {
       }
     }
   `)
+
+  console.log(data);
   return (
     <Layout>
       <SEO title="Home" />
@@ -39,11 +49,14 @@ const IndexPage = () => {
             {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
           </h3>
           <p>{node.excerpt}</p>
-          <Image fileName={node.frontmatter.featuredImage} />
+            <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
+
+
+
         </div>
       ))}
 
-    
+
 
     </Layout>
   )
