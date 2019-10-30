@@ -1,10 +1,11 @@
 import React, { useState } from "react"
-import Img from "gatsby-image"
+import Img from "gatsby-image/withIEPolyfill"
+import { Link } from "gatsby"
 
 const Slideshow = ({ data }) => {
   data = data.allMarkdownRemark
   const [index, setIndex] = useState(0)
-  console.log(data)
+  // console.log(data)
 
   //Minus 1 for array offset from 0
   const length = data.edges.length - 1
@@ -16,7 +17,10 @@ const Slideshow = ({ data }) => {
   return (
     <>
       <div className="slideshow">
-        <h3>{node.frontmatter.title}</h3>
+        <Link to={node.fields.slug}>
+          {" "}
+          <h3>{node.frontmatter.title}</h3>
+        </Link>
         <Img
           fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
           key={node.id}
