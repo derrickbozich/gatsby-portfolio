@@ -1,0 +1,18 @@
+header {
+  nav.navbar {
+    .navbar-brand {
+      font-size: 2rem;
+    }
+    #responsive-navbar-nav {
+      .navbar-nav {
+        a {
+          margin-left: 1rem;
+          h3 {
+            font-size: 2rem;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
