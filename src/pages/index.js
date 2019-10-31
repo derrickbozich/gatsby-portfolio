@@ -11,7 +11,10 @@ import SEO from "../components/seo"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { frontmatter: { featured: { eq: true } } }
+      ) {
         totalCount
         edges {
           node {
@@ -38,11 +41,12 @@ const IndexPage = () => {
   `)
 
   // <Projects data={data} />
+  // <Slideshow data={data} />
 
   return (
-    <Layout>
+    <Layout className="home">
       <SEO title="Home" />
-      <Slideshow data={data} />
+      <Projects data={data} className='projects' />
     </Layout>
   )
 }

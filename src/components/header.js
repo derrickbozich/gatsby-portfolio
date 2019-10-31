@@ -18,6 +18,9 @@ const Header = ({ siteTitle }) => (
           <Link to="/about">
             <h3>About</h3>
           </Link>
+          <Link to="/archives">
+            <h3>Archives</h3>
+          </Link>
           <a href="https://github.com/derrickbozich">
             <FaGithub color="black" size={32} />
           </a>

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Img from "gatsby-image/withIEPolyfill"
+import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
 
 const Slideshow = ({ data }) => {
@@ -14,6 +15,12 @@ const Slideshow = ({ data }) => {
   const handlePrevious = () =>
     index === 0 ? setIndex(length) : setIndex(index - 1)
   const { node } = data.edges[index]
+  // <Img
+  //   fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+  //   key={node.id}
+  //   objectFit="cover"
+  //   objectPosition="50% 50%"
+  // />
   return (
     <>
       <div className="slideshow">
@@ -21,12 +28,16 @@ const Slideshow = ({ data }) => {
           {" "}
           <h3>{node.frontmatter.title}</h3>
         </Link>
-        <Img
-          fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+
+        <BackgroundImage
           key={node.id}
-          objectFit="cover"
-          objectPosition="50% 50%"
+          fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
+          className="image"
+          style={{
+            backgroundPosition: "center top",
+          }}
         />
+        
       </div>
       <div>
         <button onClick={() => handlePrevious()}>Previous</button>

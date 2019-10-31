@@ -7,7 +7,7 @@ import Nav from "react-bootstrap/Nav"
 import { FaGithub } from "react-icons/fa"
 
 const Footer = ({ siteTitle }) => (
-  <footer className="wrap">
+  <footer className="wrap ">
     <div>
       <h3>{siteTitle}</h3>
 

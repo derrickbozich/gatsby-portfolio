@@ -1,0 +1,20 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  .project {
+    flex: 1;
+    padding: 1em;
+    min-width: 400px;
+    .header {
+      color: black;
+    }
+    .excerpt {
+      // height: 4rem;
+      // overflow-y: scroll;
+    }
+    .image {
+      height: 400px;
+      overflow-y: scroll;
+    }
+  }
+}

@@ -14,7 +14,7 @@ import Footer from "./footer"
 import "../styles/main.scss"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, className }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
-  // 
+  //
   // <footer>
   //   © {new Date().getFullYear()}, Built with
   //   {` `}
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <main>{children}</main>
+        <main className={className}>{children}</main>
 
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />
