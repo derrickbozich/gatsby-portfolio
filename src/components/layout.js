@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useRef } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,30 +25,36 @@ const Layout = ({ children, className, home }) => {
       }
     }
   `)
-  //
-  // <footer>
-  //   © {new Date().getFullYear()}, Built with
-  //   {` `}
-  //   <a href="https://www.gatsbyjs.org">Gatsby</a>
-  // </footer>
+  const colorRef = useRef()
+
+  // <button
+  //   onClick={() => {
+  //     console.log(colorRef.current.style)
+  //   }}
+  // ></button>
 
   return (
-    <>
+    <div ref={colorRef} className="layout">
       <Header siteTitle={data.site.siteMetadata.title} home={home} />
 
       <div
-        style={{
-          // margin: `0 auto`,
-          // maxWidth: 1160,
-          // padding: `0px 1.0875rem 1.45rem`,
-          // paddingTop: 0,
-        }}
+        style={
+          {
+            // margin: `0 auto`,
+            // maxWidth: 1160,
+            // padding: `0px 1.0875rem 1.45rem`,
+            // paddingTop: 0,
+          }
+        }
       >
-        <main className={className}>{children}</main>
 
+        <main className={className}>{children}</main>
       </div>
-      <Footer siteTitle={data.site.siteMetadata.title} email={data.site.siteMetadata.email} />
-    </>
+      <Footer
+        siteTitle={data.site.siteMetadata.title}
+        email={data.site.siteMetadata.email}
+      />
+    </div>
   )
 }
 

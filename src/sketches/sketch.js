@@ -41,7 +41,7 @@ export default function sketch(p) {
       //Make sure the canvas has been created
       // p.fill(color)
       // p.background("red")
-      console.log(color)
+      // console.log(color)
     }
   }
 }

@@ -1,14 +1,19 @@
 $bp-mobile: 768px;
 html {
   font-size: 62.5%;
-  -webkit-animation: pulse 80s infinite alternate;
-  -moz-animation: pulse_m 80s infinite alternate;
-  background-color: #ff0000;
+  // -webkit-animation: pulse 80s infinite alternate;
+  // -moz-animation: pulse_m 80s infinite alternate;
+  // background-color: #ff0000;
 
   body {
-    -webkit-animation: pulse 80s infinite alternate;
-    -moz-animation: pulse_m 80s infinite alternate;
-    background-color: #ff0000;
+    // -webkit-animation: pulse 80s infinite alternate;
+    // -moz-animation: pulse_m 80s infinite alternate;
+    // background-color: #ff0000;
+    .layout{
+      -webkit-animation: pulse 80s infinite alternate;
+      -moz-animation: pulse_m 80s infinite alternate;
+      background-color: #ff0000;
+    }
   }
 
   p {

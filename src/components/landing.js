@@ -1,38 +1,16 @@
-import React from 'react';
-// import P5 from "p5"
-import P5Wrapper from 'react-p5-wrapper';
-import sketch from '../sketches/sketch';
-// import { Link } from "gatsby"
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
-
-
-
-
+import React from "react"
+// import P5Wrapper from "react-p5-wrapper"
+// import sketch from "../sketches/sketch"
 
 const Landing = () => {
-
-  // function randomNumber(){
-  //   return Math.round(Math.random()*255);
-  // }
-  //
-  // const [color, setColor] = useState({color:`${ randomNumber()},${ randomNumber()},${ randomNumber()}`});
-  //
-  // function randomColor(){
-  //   setColor({color:`${ randomNumber()},${ randomNumber()},${ randomNumber()}`}
-  //   )
-  // }
-
- //  <button onClick={() => randomColor()}>
- //   Click me
- // </button>
-
+  // <P5Wrapper sketch={sketch}></P5Wrapper>
   return (
     <div className="landing container">
-      <h3>Derrick Bozich</h3>
-      <div>Full Stack Developer</div>
-
-      <P5Wrapper  sketch={sketch} ></P5Wrapper>
+      <div className="wrap">
+        <h3>Derrick Bozich</h3>
+        <div>Full Stack Developer</div>
+        <div className="sinwav"></div>
+      </div>
     </div>
   )
 }

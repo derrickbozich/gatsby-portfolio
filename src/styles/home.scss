@@ -1,21 +1,37 @@
 .home {
-  position: relative;
   .landing {
     div {
       font-size: 2rem;
     }
 
-    .p5Canvas {
-      position: absolute;
-      // outline: 2px solid black;
-      right: 7%;
-      top: 5%;
+    .wrap {
+      position: relative;
+      .sinwav {
+        position: absolute;
+        top: -7vw;
+        right: 5vw;
+        background-image: url("../images/sinwav.svg");
+        background-size: contain;
+        height: 31vw;
+        width: 36vw;
+        background-repeat: no-repeat;
+        visibility: hidden;
+        @media (min-width: $bp-mobile) {
+          visibility: visible;
+        }
+        // outline: 2px solid black;
+      }
     }
+
+    // .p5Canvas {
+    //   position: absolute;
+    //   // outline: 2px solid black;
+    //   right: 7%;
+    //   top: 5%;
+    // }
 
     // height: 100vh;
     padding: 30vh 0 60vh;
-    @media (min-width: $bp-mobile) {
-    }
   }
 
   .projects {

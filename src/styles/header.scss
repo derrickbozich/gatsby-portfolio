@@ -16,6 +16,11 @@ header {
       //
       // }
     }
+
+    .navbar-toggler-icon{
+      background-image: url('../images/bars.svg');
+      border: 0px;
+    }
     #responsive-navbar-nav {
       // @media (min-width: $bp-mobile) {
       //   position: absolute;
