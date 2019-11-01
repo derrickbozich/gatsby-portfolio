@@ -70,7 +70,7 @@ const IndexPage = () => {
   return (
     <Layout className="home">
       <SEO title="Home" />
-      <h3>Portfolio</h3>
+      
       <Projects
         data={data}
         className="projects"

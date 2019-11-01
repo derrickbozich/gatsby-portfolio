@@ -1,29 +1,38 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
-  .project {
-    // flex: 0 0 1;
-    flex: 1;
-    // padding: 1em;
-    // min-width: 400px;
-    // margin: 1%;
+  .projects-wrap {
+    // display: flex;
+    // flex-wrap: wrap;
+    display: grid;
+    // grid-template-areas:
+    //   "head head"
+    //   "head  main"
+    //   "nav  foot";
 
-    .header {
-      color: black;
-      text-align: center;
-      display: none;
-    }
-    .excerpt {
-      display: none;
-      // height: 4rem;
-      // overflow-y: scroll;
-    }
-    .image {
-      height: 400px;
-      clip-path: circle(40%);
-      // overflow-y: scroll;
-      // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    grid-gap: 1rem;
+    grid-template-rows:  1fr 2fr ;
+    grid-template-columns:  1fr 2fr;
+    // grid-gap: 1rem;
+    margin-bottom: 2rem;
+    .project {
+      // flex: 0 0 1;
+      // flex-basis: 33.33%;
+
+      .header {
+        color: black;
+        text-align: center;
+        display: none;
+      }
+      .excerpt {
+        display: none;
+        // height: 4rem;
+        // overflow-y: scroll;
+      }
+      .image {
+        height: 400px;
+        // clip-path: circle(40%);
+        // overflow-y: scroll;
+        // clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
     }
   }
 }

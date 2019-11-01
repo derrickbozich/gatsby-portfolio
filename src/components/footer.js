@@ -9,7 +9,7 @@ import { FaGithub } from "react-icons/fa"
 const Footer = ({ siteTitle, email }) => (
   <footer className="wrap ">
     <div>
-      <h3>Contact</h3>
+      <h4>Contact</h4>
       <div>{email}</div>
 
       <a href="https://github.com/derrickbozich">
