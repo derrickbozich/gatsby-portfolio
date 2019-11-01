@@ -25,7 +25,7 @@ const IndexPage = () => {
               date(formatString: "DD MMMM, YYYY")
               featuredImage {
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fluid(maxWidth: 300) {
                     ...GatsbyImageSharpFluid
                   }
                 }

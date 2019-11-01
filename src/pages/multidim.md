@@ -1,7 +1,7 @@
 ---
 title: "Multidim"
 date: "2019-07-01"
-featuredImage: ../images/slides/multidim.png
+featuredImage: ../images/slides/multidim.jpg
 featured: true
 href: https://multidim.net/
 ---

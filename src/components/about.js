@@ -35,7 +35,7 @@ const About = () => (
         <h4>Tools</h4>
         The main tools I use are: Node, Express, MongoDB, React, Redux,
         Wordpress, PHP, Sage, Ruby on Rails, CSS3, HTML5, JavaScript, Git,
-        Processing, Photoshop, Sketch, Gatsby.js, Prismic.io, GraphQL, Object
+        Processing, p5.js, Photoshop, Sketch, Gatsby, Prismic.io, GraphQL, Object
         Oriented Programming.
         <br></br>I am always open to learning new frameworks or languages, I am
         currently studying Laravel and Angular.
@@ -44,11 +44,11 @@ const About = () => (
       <h4>Clients</h4>
         <div className="clients item">
           <a
-            href="https://marfamyths.com/"
+            href="https://www.mexicansummer.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Marfa Myths
+            Mexican Summer
           </a>
           <a
             href="https://www.mosspinkflora.com/"

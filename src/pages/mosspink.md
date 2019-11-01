@@ -1,7 +1,7 @@
 ---
 title: "Moss Pink Flora"
 date: "2019-07-01"
-featuredImage: ../images/slides/mosspink.png
+featuredImage: ../images/slides/mosspink.jpg
 featured: true
 href: https://www.mosspinkflora.com/
 ---

@@ -5,13 +5,13 @@ export default function sketch(p) {
   const height = 500
   const widthInterval = width / numLines;
 
-  function randomNumber() {
-    return Math.round(Math.random() * 255)
-  }
+  // function randomNumber() {
+  //   return Math.round(Math.random() * 255)
+  // }
 
-  function randomColor() {
-    return `${randomNumber()},${randomNumber()},${randomNumber()}`
-  }
+  // function randomColor() {
+  //   return `${randomNumber()},${randomNumber()},${randomNumber()}`
+  // }
 
   p.setup = () => {
     canvas = p.createCanvas(width, height)
