@@ -1,3 +1,4 @@
+$bp-mobile: 768px;
 html {
   font-size: 62.5%;
   -webkit-animation: pulse 80s infinite alternate;
@@ -14,16 +15,17 @@ html {
     // color: white;
   }
   h3 {
-    font-size: 4rem;
+    font-size: 3rem;
     // margin-bottom: 5rem;
+    @media (min-width: $bp-mobile) {
+      font-size: 4rem;
+    }
   }
 
-  a{
+  a {
     color: #212529;
 
-
-    &:hover{
-
+    &:hover {
       text-decoration: underline;
     }
   }

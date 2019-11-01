@@ -22,7 +22,10 @@
     margin: 8rem 0;
     // background-color: #74B6F5;
     h3{
-      font-size: 4rem;
+      font-size: 3rem;
+      @media (min-width: $bp-mobile) {
+        font-size: 4rem;
+      }
     }
     .section{
       margin-bottom: 2rem;
