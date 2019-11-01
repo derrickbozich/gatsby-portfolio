@@ -1,25 +1,28 @@
 header {
   nav.navbar {
-    position: relative;
+    // position: relative;
     //Brand
     .navbar-brand {
-      h3{
-          font-size: 4rem;
-      }
-
-      // height: 100vh;
-      padding: 30vh 20vh 60vh;
-      @media (min-width: $bp-mobile) {
-
-      }
+      // h3{
+      //     font-size: 4rem;
+      // }
+      // div{
+      //   font-size: 2rem;
+      // }
+      //
+      // // height: 100vh;
+      // padding: 30vh 20vh 60vh;
+      // @media (min-width: $bp-mobile) {
+      //
+      // }
     }
     #responsive-navbar-nav {
-      @media (min-width: $bp-mobile) {
-        position: absolute;
-        top: 2%;
-        // top: 20%;
-        right: 1%;
-      }
+      // @media (min-width: $bp-mobile) {
+      //   position: absolute;
+      //   top: 2%;
+      //   // top: 20%;
+      //   right: 1%;
+      // }
       .navbar-nav {
         a {
           margin-left: 1rem;
@@ -33,11 +36,11 @@ header {
           //
           // }
 
-          transition: letter-spacing 1s;
+          // transition: letter-spacing 1s;
         }
         a:hover {
           // letter-spacing: 1.1px;
-          text-decoration: black;
+          text-decoration: underline;
         }
       }
     }

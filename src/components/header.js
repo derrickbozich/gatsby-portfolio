@@ -20,15 +20,17 @@ const Header = ({ siteTitle }) => (
   <header>
     <Navbar collapseOnSelect expand="md">
       <Navbar.Brand href="/">
-        <h3>{siteTitle}</h3>
-        <div>Full Stack Developer</div>
-
+    
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <a href="#portfolio">Portfolio</a>
-          <a href="#about">About</a>
+          <Link to="/#portfolio">
+            <div>Portfolio</div>
+          </Link>
+          <Link to="/#about">
+            <div>About</div>
+          </Link>
           <Link to="/archives">
             <div>Archives</div>
           </Link>

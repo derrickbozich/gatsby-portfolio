@@ -1,8 +1,22 @@
-footer.wrap{
+footer.wrap {
   display: flex;
   justify-content: center;
   text-align: center;
   background-color: black;
   color: white;
   padding: 8rem;
+
+  .header {
+    margin-bottom: 1rem;
+  }
+  .email {
+    color: white;
+    // text-decoration: none;
+    margin-bottom: 2rem;
+  }
+  .icons {
+    svg {
+      margin-right: 15px;
+    }
+  }
 }

@@ -1,15 +1,21 @@
 .home {
-  // width: 100vw;
-  // margin-left: -10rem;
-  .featured-works {
-    font-size: 4rem;
-    // margin-left: -4rem;
-    margin-bottom: 5rem;
+  .landing{
+
+    div{
+      font-size: 2rem;
+    }
+
+    // height: 100vh;
+    padding: 30vh 0 60vh;
+    @media (min-width: $bp-mobile) {
+
+    }
   }
 
   .projects{
     padding: 2rem 0;
-    background-color: #FFB600;
+    background-color: white;
+    // background-image: linear-gradient(rgba(255, 0, 0, 0.67), white);
   }
 
   .about{
@@ -20,6 +26,19 @@
     }
     .section{
       margin-bottom: 2rem;
+    }
+
+    a{
+      text-decoration: underline;
+
+      &:hover{
+        color: $black;
+      }
+    }
+    .clients{
+      a{
+        display: block;
+      }
     }
   }
   // .home-projects {

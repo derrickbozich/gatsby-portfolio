@@ -24,7 +24,6 @@ const Projects = ({ data, className, id, loading }) => {
                   style={{
                     backgroundPosition: "center top",
                   }}
-                  critical
                 />
               </Link>
 

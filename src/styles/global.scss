@@ -1,10 +1,92 @@
 html {
   font-size: 62.5%;
+  -webkit-animation: pulse 80s infinite alternate;
+  -moz-animation: pulse_m 80s infinite alternate;
+  background-color: #ff0000;
+
+  body {
+    -webkit-animation: pulse 80s infinite alternate;
+    -moz-animation: pulse_m 80s infinite alternate;
+    background-color: #ff0000;
+  }
+
   p {
     // color: white;
   }
-  h3{
+  h3 {
     font-size: 4rem;
     // margin-bottom: 5rem;
+  }
+
+  a{
+    color: #212529;
+
+
+    &:hover{
+
+      text-decoration: underline;
+    }
+  }
+}
+/*Animation Prefs*/
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #ff0000;
+  }
+  13% {
+    background-color: #ff9966;
+  }
+  26% {
+    background-color: #ff8200;
+  }
+  39% {
+    background-color: #ffff66;
+  }
+  52% {
+    background-color: #99ff66;
+  }
+  65% {
+    background-color: #00ff00;
+  }
+  78% {
+    background-color: #00ccff;
+  }
+
+  91% {
+    background-color: #ff9999;
+  }
+  100% {
+    background-color: #ff0000;
+  }
+}
+
+@-moz-keyframes pulse_m {
+  0% {
+    background-color: #ff0000;
+  }
+  13% {
+    background-color: #ff9966;
+  }
+  26% {
+    background-color: #ff8200;
+  }
+  39% {
+    background-color: #ffff66;
+  }
+  52% {
+    background-color: #99ff66;
+  }
+  65% {
+    background-color: #00ff00;
+  }
+  78% {
+    background-color: #00ccff;
+  }
+
+  91% {
+    background-color: #ff9999;
+  }
+  100% {
+    background-color: #ff0000;
   }
 }

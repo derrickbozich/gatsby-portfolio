@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Projects from "../components/projects"
 import About from "../components/about"
 import Slideshow from "../components/slideshow"
+import Landing from "../components/landing"
 import SEO from "../components/seo"
 
 const IndexPage = () => {
@@ -40,37 +41,11 @@ const IndexPage = () => {
     }
   `)
 
-  // <Projects data={data} />
-  // <Slideshow data={data} />
-  // <Projects
-  //   data={data}
-  //   className="projects"
-  //   id="portfolio"
-  //   loading="eager"
-  // />
-
-  // <div className="home-projects">
-  //   <div className="home-project">
-  //     <div className="first-letter letter">A</div>
-  //     <div className="second-letter letter">P</div>
-  //   </div>
-  //   <div className="home-project">
-  //     <div className="first-letter letter">M</div>
-  //     <div className="second-letter letter">M</div>
-  //   </div>
-  //   <div className="home-project">
-  //     <div className="first-letter letter">A</div>
-  //     <div className="second-letter letter">L</div>
-  //   </div>
-  // </div>
-
-  // <h2 className="featured-works">Featured Works</h2>
-
-
   return (
     <Layout className="home">
       <SEO title="Home" />
-      
+      <Landing />
+
       <Projects
         data={data}
         className="projects"
@@ -78,9 +53,6 @@ const IndexPage = () => {
         loading="eager"
       />
       <About />
-
-
-
     </Layout>
   )
 }
