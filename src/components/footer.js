@@ -1,9 +1,9 @@
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Navbar from "react-bootstrap/Navbar"
+// import Navbar from "react-bootstrap/Navbar"
 // import NavDropdown from "react-bootstrap/NavDropdown"
-import Nav from "react-bootstrap/Nav"
+// import Nav from "react-bootstrap/Nav"
 import { FaGithub } from "react-icons/fa"
 import { AiOutlineMail } from "react-icons/ai"
 

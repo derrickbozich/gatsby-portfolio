@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Projects from "../components/projects"
-import Slideshow from "../components/slideshow"
+// import Slideshow from "../components/slideshow"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Img from "gatsby-image/withIEPolyfill"
+// import Img from "gatsby-image/withIEPolyfill"
 import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
 

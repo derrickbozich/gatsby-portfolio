@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 // import Image from "../components/image"
