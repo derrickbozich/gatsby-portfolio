@@ -16,33 +16,35 @@ import { FaGithub } from "react-icons/fa"
 //   />
 // </svg>
 
-const Header = ({ siteTitle }) => (
-  <header>
-    <Navbar collapseOnSelect expand="md">
-      <Navbar.Brand href="/">
-    
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="ml-auto">
-          <Link to="/#portfolio">
-            <div>Portfolio</div>
-          </Link>
-          <Link to="/#about">
-            <div>About</div>
-          </Link>
-          <Link to="/archives">
-            <div>Archives</div>
-          </Link>
+const Header = ({ siteTitle, home }) => {
+  return (
+    <header>
+      <Navbar collapseOnSelect expand="md">
+        <Navbar.Brand>
+          <Link to="/">{home ? "" : <h4>Derrick Bozich</h4>}</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-auto">
+            <Link to="/#portfolio">
+              <div>Portfolio</div>
+            </Link>
+            <Link to="/#about">
+              <div>About</div>
+            </Link>
+            <Link to="/archives">
+              <div>Archives</div>
+            </Link>
 
-          <a href="https://github.com/derrickbozich">
-            <FaGithub color="black" size={32} />
-          </a>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
-  </header>
-)
+            <a href="https://github.com/derrickbozich">
+              <FaGithub color="black" size={32} />
+            </a>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

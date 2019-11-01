@@ -42,7 +42,7 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout className="home">
+    <Layout className="home" home={true}>
       <SEO title="Home" />
       <Landing />
 
