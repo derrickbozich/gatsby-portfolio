@@ -1,22 +1,23 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { FaAngleDoubleRight } from "react-icons/fa"
 import { FaAngleDoubleLeft } from "react-icons/fa"
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
+  const { next, prev } = pageContext
   let post = data.markdownRemark
 
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 
-  function next() {
-    console.log("next")
-  }
-  function previous() {
-    console.log("previous")
-  }
+  // function nextPost() {
+  //   console.log("next")
+  // }
+  // function previousPost() {
+  //   console.log("previous")
+  // }
 
   return (
     <Layout home={false}>
@@ -32,18 +33,22 @@ export default ({ data }) => {
           <Img fluid={featuredImgFluid} />
         </a>
 
-        <FaAngleDoubleRight
-          className="next"
-          color="black"
-          size={32}
-          onClick={next}
-        />
-        <FaAngleDoubleLeft
-          className="previous"
-          color="black"
-          size={32}
-          onClick={previous}
-        />
+        {next && (
+          <Link to={next.fields.slug}>
+            <FaAngleDoubleRight className="next" color="black" size={32} />
+          </Link>
+        )}
+
+        {prev && (
+          <Link to={prev.fields.slug}>
+            <FaAngleDoubleLeft
+              className="previous"
+              color="black"
+              size={32}
+              // onClick={previousPost}
+            />
+          </Link>
+        )}
       </div>
     </Layout>
   )
