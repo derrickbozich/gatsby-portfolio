@@ -20,6 +20,7 @@ const Layout = ({ children, className }) => {
       site {
         siteMetadata {
           title
+          email
         }
       }
     }
@@ -38,7 +39,7 @@ const Layout = ({ children, className }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 960,
+          maxWidth: 1160,
           padding: `0px 1.0875rem 1.45rem`,
           paddingTop: 0,
         }}
@@ -46,7 +47,7 @@ const Layout = ({ children, className }) => {
         <main className={className}>{children}</main>
 
       </div>
-      <Footer siteTitle={data.site.siteMetadata.title} />
+      <Footer siteTitle={data.site.siteMetadata.title} email={data.site.siteMetadata.email} />
     </>
   )
 }

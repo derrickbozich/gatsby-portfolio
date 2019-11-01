@@ -3,7 +3,7 @@ import Img from "gatsby-image/withIEPolyfill"
 import BackgroundImage from "gatsby-background-image"
 import { Link } from "gatsby"
 
-const Slideshow = ({ data }) => {
+const Slideshow = ({ data, className }) => {
   data = data.allMarkdownRemark
   const [index, setIndex] = useState(0)
   // console.log(data)
@@ -23,7 +23,7 @@ const Slideshow = ({ data }) => {
   // />
   return (
     <>
-      <div className="slideshow">
+      <div className={className}>
         <Link to={node.fields.slug}>
           {" "}
           <h3>{node.frontmatter.title}</h3>
@@ -37,7 +37,7 @@ const Slideshow = ({ data }) => {
             backgroundPosition: "center top",
           }}
         />
-        
+
       </div>
       <div>
         <button onClick={() => handlePrevious()}>Previous</button>

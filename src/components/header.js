@@ -6,21 +6,35 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import { FaGithub } from "react-icons/fa"
 
+// <svg width="400" height="110">
+//   <rect
+//     width="300"
+//     height="100"
+//     style={{
+//       fill:'red'
+//     }}
+//   />
+// </svg>
+
 const Header = ({ siteTitle }) => (
   <header>
-    <Navbar collapseOnSelect expand="lg">
+    <Navbar collapseOnSelect expand="md">
       <Navbar.Brand href="/">
         <h3>{siteTitle}</h3>
+        <div>Full Stack Developer</div>
+
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
+          <a href="#portfolio">Portfolio</a>
           <Link to="/about">
-            <h3>About</h3>
+            <div>About</div>
           </Link>
           <Link to="/archives">
-            <h3>Archives</h3>
+            <div>Archives</div>
           </Link>
+
           <a href="https://github.com/derrickbozich">
             <FaGithub color="black" size={32} />
           </a>

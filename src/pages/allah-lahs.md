@@ -5,4 +5,4 @@ featuredImage: ../images/slides/allah-las.png
 featured: true
 ---
 
-A landing page for the Allah Lahs.
+A landing page for the Allah Lahs. A landing page for the Allah Lahs. A landing page for the Allah Lahs. A landing page for the Allah Lahs.

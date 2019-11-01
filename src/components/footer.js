@@ -6,10 +6,11 @@ import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 import { FaGithub } from "react-icons/fa"
 
-const Footer = ({ siteTitle }) => (
+const Footer = ({ siteTitle, email }) => (
   <footer className="wrap ">
     <div>
-      <h3>{siteTitle}</h3>
+      <h3>Contact</h3>
+      <div>{email}</div>
 
       <a href="https://github.com/derrickbozich">
         <FaGithub color="white" size={32} />
