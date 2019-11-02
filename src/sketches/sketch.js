@@ -1,45 +1,11 @@
 export default function sketch(p) {
   let canvas
   const numLines = 50.0
-  const width = 358
-  const height = 400
+  let width = 358
+  let height = 400
   const widthInterval = width / numLines
   let img // Declare variable 'img'.
   let image = require("../images/sinwav.svg")
-
-  // function randomNumber() {
-  //   return Math.round(Math.random() * 255)
-  // }
-
-  // function randomColor() {
-  //   return `${randomNumber()},${randomNumber()},${randomNumber()}`
-  // }
-
-  // p.setup = () => {
-  //   canvas = p.createCanvas(width, height)
-  //   p.strokeWeight(3)
-  //   // p.background(randomColor())
-  //   // p.ellipse(150, 100, 100, 100)
-  // }
-  //
-  // p.draw = () => {
-  //   // p.background(randomNumber())
-  //   // p.ellipse(150, 100, 100, 100)
-  //   // for (var i = 0; i < numLines; i++) {
-  //   //   p.line(0, i * 10, width, i * 10)
-  //   //   p.stroke(i + 3);
-  //   // }
-  //   let a = 0.0
-  //   let inc = p.TWO_PI / numLines
-  //   for (let i = 0; i < numLines; i++) {
-  //     p.line(i * widthInterval, height/2, i * widthInterval, height/2 + p.sin(a) * height/2)
-  //     a = a + inc
-  //   }
-  //   // console.log('draw');
-  // }
-  //
-
-  // By Roni Kaufman
 
   let t = 0
   let color = p.color("rgba(100%, 0%, 0%, 0.63)")
@@ -48,7 +14,7 @@ export default function sketch(p) {
     p.color("rgba(255,0,183, 0.63)"), //pink
     p.color("rgba(0,0,255, 0.63)"), //blue
     p.color("rgba(255,255,102, 0.63)"), //yellow
-    p.color("rgba(255,153,102, 0.63)"),  //orange
+    p.color("rgba(255,153,102, 0.63)"), //orange
     p.color("rgba(153,255,102, 0.99)"), //lime
     p.color("rgba(40%, 10%, 80%, 0.63)"),
     p.color("rgba(40%, 10%, 80%, 0.63)"),
@@ -62,22 +28,18 @@ export default function sketch(p) {
 
   p.setup = () => {
     p.createCanvas(width, height)
-    // p.colorMode(p.HSB, 1)
     p.noStroke()
     img = p.loadImage(image) // Load the image
   }
 
   p.draw = () => {
     p.blendMode(p.BLEND)
-    // p.background(1)
     p.clear()
-
     p.blendMode(p.DARKEST)
-    // p.image(img, 0, 0)
 
     p.fill(color)
     blob(
-      100,
+      height/3,
       width / 2 + p.noise(t / 2 + 4),
       height / 2 + p.noise(t / 2 + 5),
       0.75,
@@ -87,10 +49,15 @@ export default function sketch(p) {
     t += 0.001
   }
 
-  p.myCustomRedrawAccordingToNewPropsHandler = ({ index, i }) => {
+  p.myCustomRedrawAccordingToNewPropsHandler = ({ index, i, newWidth, newHeight }) => {
     const pos = (index + i) % 6
 
-    console.log(`pos: ${pos}`)
+    console.log(`width: ${width}`)
+    if (typeof newWidth !== 'undefined') {
+      width = newWidth
+      height = newHeight
+    }
+
     color = colors[pos]
   }
 

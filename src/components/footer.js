@@ -21,18 +21,18 @@ const Footer = ({ siteTitle, email }) => (
       </a>
       <div className="icons">
         <a
-          href="https://github.com/derrickbozich"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaGithub color="white" size={32} />
-        </a>
-        <a
           href="mailto:dbozich1@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           <AiOutlineMail color="white" size={32} />
+        </a>
+        <a
+          href="https://github.com/derrickbozich"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub color="white" size={32} />
         </a>
       </div>
     </div>
