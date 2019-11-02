@@ -1,11 +1,11 @@
 export default function sketch(p) {
-  let canvas
-  const numLines = 50.0
-  let width = 358
-  let height = 400
-  const widthInterval = width / numLines
-  let img // Declare variable 'img'.
-  let image = require("../images/sinwav.svg")
+  // let canvas
+  // const numLines = 50.0
+  let width = 0
+  let height = 0
+  // const widthInterval = width / numLines
+  // let img // Declare variable 'img'.
+  // let image = require("../images/sinwav.svg")
 
   let t = 0
   let color = p.color("rgba(100%, 0%, 0%, 0.63)")
@@ -29,7 +29,7 @@ export default function sketch(p) {
   p.setup = () => {
     p.createCanvas(width, height)
     p.noStroke()
-    img = p.loadImage(image) // Load the image
+    // img = p.loadImage(image) // Load the image
   }
 
   p.draw = () => {
@@ -39,7 +39,7 @@ export default function sketch(p) {
 
     p.fill(color)
     blob(
-      height/3,
+      width/3,
       width / 2 + p.noise(t / 2 + 4),
       height / 2 + p.noise(t / 2 + 5),
       0.75,
@@ -52,10 +52,12 @@ export default function sketch(p) {
   p.myCustomRedrawAccordingToNewPropsHandler = ({ index, i, newWidth, newHeight }) => {
     const pos = (index + i) % 6
 
-    console.log(`width: ${width}`)
+    // console.log(`newWidth: ${newWidth}`)
     if (typeof newWidth !== 'undefined') {
+      // console.log('newWidth to sketch');
       width = newWidth
       height = newHeight
+      p.resizeCanvas(newWidth, newHeight);
     }
 
     color = colors[pos]

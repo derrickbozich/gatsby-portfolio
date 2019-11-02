@@ -1,11 +1,12 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 // import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import P5Wrapper from "react-p5-wrapper"
 import sketch from "../sketches/sketch"
-import { FaAngleDoubleRight } from "react-icons/fa"
-import { FaAngleDoubleLeft } from "react-icons/fa"
+// import { FaAngleDoubleRight } from "react-icons/fa"
+// import { FaAngleDoubleLeft } from "react-icons/fa"
+import useWindowSize from "../helpers/useWindowSize"
 
 // import Image from "../components/image"
 
@@ -49,8 +50,11 @@ import { FaAngleDoubleLeft } from "react-icons/fa"
 
 const Projects = ({ data, className, id }) => {
   const [index, setIndex] = useState(0)
-  const [canvasWidth, setCanvasWidth] = useState(120)
-  const [canvasHeight, setCanvasHeight] = useState(120)
+  const [canvasWidth, setCanvasWidth] = useState(0)
+  const [canvasHeight, setCanvasHeight] = useState(0)
+  const projectEl = useRef(null)
+
+  const size = useWindowSize()
 
   const posts = data.allMarkdownRemark.edges
 
@@ -62,39 +66,76 @@ const Projects = ({ data, className, id }) => {
   const next = index === length ? posts[0] : posts[index + 1]
   const prev = index === 0 ? posts[length] : posts[index - 1]
 
-  const handleNext = () =>
-    index === length ? setIndex(0) : setIndex(index + 1)
-  const handlePrevious = () =>
-    index === 0 ? setIndex(length) : setIndex(index - 1)
+  // const handleNext = () =>
+  //   index === length ? setIndex(0) : setIndex(index + 1)
+  // const handlePrevious = () =>
+  //   index === 0 ? setIndex(length) : setIndex(index - 1)
   const handleDot = i => setIndex(i)
 
-  const currentPosts = [prev, node, next]
+  const currentPosts = size.width >= 768 ? [prev, node, next] : posts
 
   const totalDots = Math.ceil(posts.length / currentPosts)
-  const projectEl = useRef(null)
 
-  const onButtonClick = () => {
-    // `current` points to the mounted text input element
-    const dimensions = projectEl.current.getBoundingClientRect()
-    console.log(`dimensions: ${dimensions.width}`);
-    setCanvasWidth(dimensions.width)
-    setCanvasHeight(dimensions.height)
+  // const onButtonClick = () => {
+  //   // `current` points to the mounted text input element
+  //   resizeCanvas()
+  //
+  // }
 
+  const resizeCanvas = () => {
+    if (projectEl.current === null) {
+      console.log("projectEl.current === null")
+      return
+    } else {
+      const dimensions = projectEl.current.getBoundingClientRect()
+      // console.log(`dimensions: ${dimensions.width}`)
+      setCanvasWidth(dimensions.width)
+      setCanvasHeight(dimensions.height)
+    }
   }
+
+  // const dimensions = () => {
+  //   if (typeof projectEl.current.getBoundingClientRect() !== 'undefined' ) {
+  //     return
+  //   }
+  // }
+
+  useEffect(() => {
+    resizeCanvas()
+  }, [size.width])
+
+  // <div>
+  //   <FaAngleDoubleRight
+  //     className="next"
+  //     color="black"
+  //     size={32}
+  //     onClick={() => handleNext()}
+  //   />
+  //   <FaAngleDoubleLeft
+  //     className="prev"
+  //     color="black"
+  //     size={32}
+  //     onClick={() => handlePrevious()}
+  //   />
+  // </div>
+
   // const currentPosts = data.allMarkdownRemark.edges;
   // console.log(`next ${next}`)
   // console.log(`posts ${JSON.stringify(posts, null, 2)}`);
+
+  //     <button onClick={resizeCanvas}>Focus the input</button>
   return (
     <div className={className} id={id}>
       <div className="container">
         <h3>Portfolio</h3>
-        <button onClick={onButtonClick}>Focus the input</button>
+
         <div className="projects-wrap">
           {currentPosts.map(({ node }, i) => (
             <div ref={projectEl} key={node.id} className="project">
               <Link to={node.fields.slug} className="header">
                 {" "}
                 <h4>{node.frontmatter.title}</h4>
+
               </Link>
               <Link to={node.fields.slug}>
                 <BackgroundImage
@@ -117,35 +158,24 @@ const Projects = ({ data, className, id }) => {
               <p className="excerpt">{node.excerpt}</p>
             </div>
           ))}
-
-          <div>
-            <FaAngleDoubleRight
-              className="next"
-              color="black"
-              size={32}
-              onClick={() => handleNext()}
-            />
-            <FaAngleDoubleLeft
-              className="prev"
-              color="black"
-              size={32}
-              onClick={() => handlePrevious()}
-            />
+        </div>
+        {size.width > 768 ? (
+          <div className="dots">
+            {posts.map(({ node }, i) =>
+              index === i ? (
+                <div
+                  key={i}
+                  className="dot active"
+                  onClick={() => handleDot(i)}
+                ></div>
+              ) : (
+                <div key={i} className="dot" onClick={() => handleDot(i)}></div>
+              )
+            )}
           </div>
-        </div>
-        <div className="dots">
-          {posts.map(({ node }, i) =>
-            index === i ? (
-              <div
-                key={i}
-                className="dot active"
-                onClick={() => handleDot(i)}
-              ></div>
-            ) : (
-              <div key={i} className="dot" onClick={() => handleDot(i)}></div>
-            )
-          )}
-        </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   )
