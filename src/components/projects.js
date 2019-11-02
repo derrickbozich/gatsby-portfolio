@@ -135,7 +135,6 @@ const Projects = ({ data, className, id }) => {
               <Link to={node.fields.slug} className="header">
                 {" "}
                 <h4>{node.frontmatter.title}</h4>
-
               </Link>
               <Link to={node.fields.slug}>
                 <BackgroundImage
@@ -145,14 +144,16 @@ const Projects = ({ data, className, id }) => {
                     backgroundPosition: "center top",
                   }}
                 />
-                <P5Wrapper
-                  className="canvas"
-                  sketch={sketch}
-                  i={i}
-                  index={index}
-                  newWidth={canvasWidth}
-                  newHeight={canvasHeight}
-                ></P5Wrapper>
+                {typeof window !== "undefined" && P5Wrapper && (
+                  <P5Wrapper
+                    className="canvas"
+                    sketch={sketch}
+                    i={i}
+                    index={index}
+                    newWidth={canvasWidth}
+                    newHeight={canvasHeight}
+                  ></P5Wrapper>
+                )}
               </Link>
 
               <p className="excerpt">{node.excerpt}</p>
