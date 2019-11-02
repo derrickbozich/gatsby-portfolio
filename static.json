@@ -1,5 +1,9 @@
 {
-  "root": "dist/",
-  "clean_urls": true,
-  "https_only": true
+  "root": "public/",
+  "https_only": true,
+  "headers": {
+    "/**.js": {
+      "Cache-Control": "public, max-age=0, must-revalidate"
+    }
+  }
 }
