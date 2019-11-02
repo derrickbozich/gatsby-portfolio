@@ -15,6 +15,17 @@ header {
       // @media (min-width: $bp-mobile) {
       //
       // }
+      a{
+        &:hover{
+          color: black;
+        }
+        h4{
+          &:hover{
+            color: black;
+          }
+        }
+      }
+
     }
 
     .navbar-toggler-icon{

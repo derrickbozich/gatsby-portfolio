@@ -37,7 +37,7 @@
   .projects {
     padding: 2rem 0;
     background-color: white;
-    // background-image: linear-gradient(rgba(255, 0, 0, 0.67), white);
+    
   }
 
   .about {
@@ -66,39 +66,5 @@
       }
     }
   }
-  // .home-projects {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin-bottom: 4rem;
-  //
-  //
-  //   .home-project {
-  //     flex:  0 0 1;
-  //     flex-basis: 30.33%;
-  //     // width: 20%;
-  //     // border: 2px solid black;
-  //     // border-radius: 50%;
-  //     margin: 1%;
-  //
-  //     height: 300px;
-  //     // min-width: 300px;
-  //     position: relative;
-  //     .letter {
-  //       position: absolute;
-  //       font-size: 13rem;
-  //       line-height: 0;
-  //       letter-spacing: 0;
-  //     }
-  //     .first-letter {
-  //       top: 30%;
-  //       left: 0;
-  //       color: rgba(255, 0, 0, 0.7);
-  //     }
-  //     .second-letter {
-  //       top: 60%;
-  //       left: 40%;
-  //       color: rgba(0, 0, 255, 0.7);
-  //     }
-  //   }
-  // }
+
 }

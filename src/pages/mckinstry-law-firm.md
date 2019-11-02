@@ -1,5 +1,5 @@
 ---
-title: "McKinstry Law Firm"
+title: "The McKinstry Law Firm"
 date: "2019-07-01"
 featuredImage: ../images/slides/mckinstry.jpg
 featured: true

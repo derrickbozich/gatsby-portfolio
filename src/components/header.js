@@ -26,17 +26,23 @@ const Header = ({ siteTitle, home }) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Link to="/#portfolio">
-              <div>Portfolio</div>
-            </Link>
-            <Link to="/#about">
-              <div>About</div>
-            </Link>
-            <Link to="/archives">
-              <div>Archives</div>
-            </Link>
+            {home ? (
+              <a href="/#portfolio">Portfolio</a>
+            ) : (
+              <Link to="/#portfolio">
+                <div>Portfolio</div>
+              </Link>
+            )}
 
-            <a href="https://github.com/derrickbozich">
+            {home ? (
+              <a href="/#about">About</a>
+            ) : (
+              <Link to="/#about">
+                <div>About</div>
+              </Link>
+            )}
+
+            <a href="https://github.com/derrickbozich" target="_blank" rel="noopener noreferrer">
               <FaGithub color="black" size={32} />
             </a>
           </Nav>

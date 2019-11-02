@@ -29,40 +29,46 @@ export default ({ data, pageContext }) => {
             <div className="explore">Explore the Site</div>
           </a>
         </div>
-
         <div className="image-wrap">
-          <a
-            href={post.frontmatter.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <BackgroundImage
-              fluid={featuredImgFluid}
-              style={{
-                backgroundPosition: "center top",
-                backgroundSize: 'cover',
-              }}
-            />
-          </a>
+          <div className="image-wrap-2">
+            <a
+              href={post.frontmatter.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <BackgroundImage
+                fluid={featuredImgFluid}
+                style={{
+                  backgroundPosition: "center top",
+                  backgroundSize: "cover",
+                  className: "image",
+                }}
+              >
+                <div className="image-fill"> </div>
+              </BackgroundImage>
+            </a>
 
-          {next && (
-            <Link to={next.fields.slug}>
-              <FaAngleDoubleRight className="next" color="black" size={32} />
-            </Link>
-          )}
+            {next && (
+              <Link to={next.fields.slug}>
+                <FaAngleDoubleRight className="next" color="black" size={32} />
+              </Link>
+            )}
 
-          {prev && (
-            <Link to={prev.fields.slug}>
-              <FaAngleDoubleLeft
-                className="previous"
-                color="black"
-                size={32}
-                // onClick={previousPost}
-              />
-            </Link>
-          )}
-        </div>
+            {prev && (
+              <Link to={prev.fields.slug}>
+                <FaAngleDoubleLeft
+                  className="previous"
+                  color="black"
+                  size={32}
+                  // onClick={previousPost}
+                />
+              </Link>
+            )}
+          </div>
+        </div>{" "}
+        {/*.image-wrap */}
       </div>
+      {/*.blog-post */}
     </Layout>
   )
 }
