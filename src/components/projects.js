@@ -95,9 +95,9 @@ const Projects = ({ data, className, id }) => {
   }
 
 
-  // useEffect(() => {
-  //   resizeCanvas()
-  // }, [size.width])
+  useEffect(() => {
+    resizeCanvas()
+  }, [size.width])
 
 
 
