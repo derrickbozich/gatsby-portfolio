@@ -94,30 +94,12 @@ const Projects = ({ data, className, id }) => {
     }
   }
 
-  // const dimensions = () => {
-  //   if (typeof projectEl.current.getBoundingClientRect() !== 'undefined' ) {
-  //     return
-  //   }
-  // }
 
-  useEffect(() => {
-    resizeCanvas()
-  }, [size.width])
+  // useEffect(() => {
+  //   resizeCanvas()
+  // }, [size.width])
 
-  // <div>
-  //   <FaAngleDoubleRight
-  //     className="next"
-  //     color="black"
-  //     size={32}
-  //     onClick={() => handleNext()}
-  //   />
-  //   <FaAngleDoubleLeft
-  //     className="prev"
-  //     color="black"
-  //     size={32}
-  //     onClick={() => handlePrevious()}
-  //   />
-  // </div>
+
 
   // const currentPosts = data.allMarkdownRemark.edges;
   // console.log(`next ${next}`)
