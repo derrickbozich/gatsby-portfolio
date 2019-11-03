@@ -50,7 +50,6 @@ const IndexPage = () => {
         data={data}
         className="projects"
         id="portfolio"
-        loading="eager"
       />
       <About />
     </Layout>
