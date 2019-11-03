@@ -41,19 +41,17 @@ const IndexPage = () => {
     }
   `)
 
-  // <Projects
-  //   data={data}
-  //   className="projects"
-  //   id="portfolio"
-  //   loading="eager"
-  // />
-
   return (
     <Layout className="home" home={true}>
       <SEO title="Home" />
       <Landing />
 
-
+      <Projects
+        data={data}
+        className="projects"
+        id="portfolio"
+        loading="eager"
+      />
       <About />
     </Layout>
   )
