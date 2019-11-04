@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 // import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
-// import P5Wrapper from "react-p5-wrapper"
+import P5Wrapper from "react-p5-wrapper"
 import sketch from "../sketches/sketch"
 // import { FaAngleDoubleRight } from "react-icons/fa"
 // import { FaAngleDoubleLeft } from "react-icons/fa"
@@ -126,7 +126,7 @@ const Projects = ({ data, className, id }) => {
                     backgroundPosition: "center top",
                   }}
                 />
-                { /*typeof window !== "undefined" && P5Wrapper && (
+                {typeof window !== "undefined" && P5Wrapper && (
                   <P5Wrapper
                     className="canvas"
                     sketch={sketch}
@@ -135,7 +135,7 @@ const Projects = ({ data, className, id }) => {
                     newWidth={canvasWidth}
                     newHeight={canvasHeight}
                   ></P5Wrapper>
-                ) */}
+                )}
               </Link>
 
               <p className="excerpt">{node.excerpt}</p>
