@@ -22,14 +22,10 @@ export default function sketch(p) {
     p.color("rgba(40%, 10%, 80%, 0.63)"),
   ]
 
-  // p.preload = () => {
-  //   img = loadImage("assets/laDefense.jpg")
-  // }
 
   p.setup = () => {
     p.createCanvas(width, height)
     p.noStroke()
-    // img = p.loadImage(image) // Load the image
   }
 
   p.draw = () => {
@@ -46,15 +42,13 @@ export default function sketch(p) {
       t + 2
     )
 
-    t += 0.001
+    t += 0.0015
   }
 
   p.myCustomRedrawAccordingToNewPropsHandler = ({ index, i, newWidth, newHeight }) => {
     const pos = (index + i) % 6
 
-    // console.log(`newWidth: ${newWidth}`)
     if (typeof newWidth !== 'undefined') {
-      // console.log('newWidth to sketch');
       width = newWidth
       height = newHeight
       p.resizeCanvas(newWidth, newHeight);

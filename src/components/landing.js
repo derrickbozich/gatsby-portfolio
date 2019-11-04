@@ -5,8 +5,8 @@ import React from "react"
 const Landing = () => {
   // <P5Wrapper sketch={sketch}></P5Wrapper>
   return (
-    <div className="landing container">
-      <div className="wrap">
+    <div className="landing ">
+      <div className="wrap container">
         <h3>Derrick Bozich</h3>
         <div>Full Stack Developer</div>
         <div className="sinwav"></div>

@@ -4,7 +4,11 @@ footer.wrap {
   text-align: center;
   background-color: black;
   color: white;
-  padding: 8rem;
+  padding: 5rem;
+
+  @media (min-width: $bp-mobile) {
+    padding: 8rem;
+  }
 
   .header {
     margin-bottom: 1rem;

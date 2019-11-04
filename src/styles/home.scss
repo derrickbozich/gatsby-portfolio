@@ -1,16 +1,26 @@
 .home {
+  // .container{
+  //   padding: 0 1rem !important;
+  // }
   .landing {
     div {
-      font-size: 2rem;
+      font-size: 1.5rem;
+      @media (min-width: $bp-mobile) {
+        font-size: 2rem;
+      }
     }
 
     .wrap {
       position: relative;
+      // margin-left: 0.5rem;
+      // @media (min-width: $bp-mobile) {
+      //   margin-left: 0;
+      // }
       .sinwav {
         position: absolute;
         top: -7vw;
         right: 5vw;
-        background-image: url("../images/sinwav.svg");
+        background-image: url('../images/sinwav.svg');
         background-size: contain;
         height: 31vw;
         width: 36vw;
@@ -37,18 +47,21 @@
   .projects {
     padding: 2rem 0;
     background-color: white;
-    
   }
 
   .about {
-    margin: 8rem 0;
-    // background-color: #74B6F5;
-    h3 {
-      font-size: 3rem;
-      @media (min-width: $bp-mobile) {
-        font-size: 4rem;
-      }
+    margin: 2rem 0;
+
+    @media (min-width: $bp-mobile) {
+      margin: 8rem 0;
     }
+    // background-color: #74B6F5;
+    // h3 {
+    //   font-size: 3rem;
+    //   @media (min-width: $bp-mobile) {
+    //     font-size: 4rem;
+    //   }
+    // }
     .section {
       margin-bottom: 2rem;
     }
@@ -62,9 +75,12 @@
     }
     .clients {
       a {
+        margin-bottom: 0.3rem;
         display: block;
+        @media (min-width: $bp-mobile) {
+          margin-bottom: 0;
+        }
       }
     }
   }
-
 }

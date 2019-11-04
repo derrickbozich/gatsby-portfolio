@@ -33,9 +33,9 @@ const About = () => (
       </div>
       <div className="section">
         <h4>Tools</h4>
-        The main tools I use are: Node, Express, MongoDB, React, Redux,
-        Wordpress, PHP, Sage, Ruby on Rails, CSS3, HTML5, JavaScript, Git,
-        Processing, p5.js, Photoshop, Sketch, Gatsby, Prismic.io, GraphQL, Object
+        Node, Express, MongoDB, React, Redux,
+        Wordpress, PHP, Apache, Sage, Gatsby, Prismic.io, GraphQL, Slim, Ruby on Rails, CSS3, HTML5, JavaScript, Git, Grunt,
+        Processing, p5.js, Photoshop, Sketch,  Object
         Oriented Programming.
         <br></br>I am always open to learning new frameworks or languages, I am
         currently studying Laravel and Angular.

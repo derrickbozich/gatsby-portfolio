@@ -3,7 +3,10 @@
   // -moz-animation: projects_pulse_m 80s infinite alternate;
   min-height: 100vh;
   h3 {
-    margin: 3rem 0;
+    margin: 1rem;
+    @media (min-width: $bp-mobile) {
+      margin: 3rem 0;
+    }
   }
 
   .dots {
@@ -16,7 +19,7 @@
 
       position: relative;
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         height: 20px;
         width: 20px;
@@ -30,7 +33,7 @@
 
     div.dot.active {
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         height: 20px;
         width: 20px;
@@ -61,7 +64,7 @@
 
     @media (min-width: $bp-mobile) {
     }
-    position: relative; 
+    position: relative;
 
     // grid-gap: 1rem;
     margin-bottom: 2rem;
@@ -70,8 +73,14 @@
     .project {
       position: relative;
       // outline: 2px solid black;
-      min-width: 200px;
-      min-height: 450px;
+      max-height: 300px;
+
+      // min-height: 350px;
+      @media (min-width: $bp-mobile) {
+        min-width: 200px;
+        min-height: 450px;
+        max-height: 500px;
+      }
       width: 100%;
 
       flex: 0 0 1;
@@ -97,8 +106,8 @@
         z-index: 3;
         text-align: center;
 
-        h4{
-            font-weight: bold;
+        h4 {
+          font-weight: bold;
         }
 
         color: black;
