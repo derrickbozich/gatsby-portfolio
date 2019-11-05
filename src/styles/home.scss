@@ -39,8 +39,14 @@
     margin: 2rem 0;
     font-size: 1.3rem;
 
+    @media (min-width: $bp-mobile) {
+      padding: 3rem 0 6rem;
+      font-size: 1rem;
+      // padding: 0 ;
+    }
+
     h3{
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
     a {
@@ -52,11 +58,7 @@
       }
     }
 
-    @media (min-width: $bp-mobile) {
-      padding: 6rem 0;
-      font-size: 1rem;
-      // padding: 0 ;
-    }
+
 
     .section {
       margin-bottom: 2rem;
