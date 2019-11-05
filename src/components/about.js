@@ -38,7 +38,7 @@ const About = () => (
         Processing{" "}, p5.js{" "}, Photoshop{" "}, Sketch{" "},  Object
         Oriented Programming.{" "}
         <p>  I am always open to learning new frameworks or languages, I am
-          currently focusing on more advanced React concepts.</p>
+          currently focusing on learning more advanced React concepts.</p>
 
       </div>
       <div className="section">

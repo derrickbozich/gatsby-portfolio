@@ -42,6 +42,14 @@ const Header = ({ siteTitle, home }) => {
               </Link>
             )}
 
+            {home ? (
+              <a href="/#contact">Contact</a>
+            ) : (
+              <Link to="/#contact">
+                <div>Contact</div>
+              </Link>
+            )}
+
             <a href="https://github.com/derrickbozich" target="_blank" rel="noopener noreferrer">
               <FaGithub color="black" size={32} />
             </a>

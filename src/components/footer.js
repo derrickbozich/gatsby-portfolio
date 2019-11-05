@@ -8,7 +8,7 @@ import { FaGithub } from "react-icons/fa"
 import { AiOutlineMail } from "react-icons/ai"
 
 const Footer = ({ siteTitle, email }) => (
-  <footer className="wrap ">
+  <footer className="wrap" id="contact">
     <div>
       <h4 className="header">Contact</h4>
       <a

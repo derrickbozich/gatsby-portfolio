@@ -75,6 +75,7 @@ export default function sketch(p) {
         r1 = 1
         r2 = p.cos(theta)
       }
+      // p.noiseSeed(99);
       let r = size + p.noise(k * r1, k * r2, t) * (2 / 3) * size
       let x = xCenter + r * p.cos(theta)
       let y = yCenter + r * p.sin(theta)
