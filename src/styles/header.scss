@@ -1,20 +1,9 @@
 header {
   nav.navbar {
-    // position: relative;
+
     //Brand
     .navbar-brand {
-      // h3{
-      //     font-size: 4rem;
-      // }
-      // div{
-      //   font-size: 2rem;
-      // }
-      //
-      // // height: 100vh;
-      // padding: 30vh 20vh 60vh;
-      // @media (min-width: $bp-mobile) {
-      //
-      // }
+
       a{
         &:hover{
           color: black;
@@ -28,34 +17,31 @@ header {
 
     }
 
-    .navbar-toggler-icon{
-      background-image: url('../images/bars.svg');
-      border: 0px;
+    button.navbar-toggler{
+      .navbar-toggler-icon{
+        background-image: url('../images/bars.svg');
+        width: 30px;
+        height: 40px;
+        border: 0px;
+      }
+      border: 0px solid black;
     }
+
+
     #responsive-navbar-nav {
-      // @media (min-width: $bp-mobile) {
-      //   position: absolute;
-      //   top: 2%;
-      //   // top: 20%;
-      //   right: 1%;
-      // }
+
       .navbar-nav {
         a {
           margin-left: 1rem;
-          font-size: 1rem;
+          font-size: 2rem;
           color: black;
-          // h3 {
-          //
-          // }
-          // svg{
-          //   height: 100% !important;
-          //
-          // }
 
-          // transition: letter-spacing 1s;
+          @media (min-width: $bp-mobile) {
+            font-size: 1rem;
+          }
+
         }
         a:hover {
-          // letter-spacing: 1.1px;
           text-decoration: underline;
         }
       }

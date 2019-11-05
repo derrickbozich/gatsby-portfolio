@@ -1,11 +1,7 @@
 export default function sketch(p) {
-  // let canvas
-  // const numLines = 50.0
+
   let width = 0
   let height = 0
-  // const widthInterval = width / numLines
-  // let img // Declare variable 'img'.
-  // let image = require("../images/sinwav.svg")
 
   let t = 0
   let color = p.color("rgba(100%, 0%, 0%, 0.63)")
@@ -42,7 +38,7 @@ export default function sketch(p) {
       t + 2
     )
 
-    t += 0.0015
+    t += 0.0012
   }
 
   p.myCustomRedrawAccordingToNewPropsHandler = ({ index, i, newWidth, newHeight }) => {

@@ -33,15 +33,17 @@ const About = () => (
       </div>
       <div className="section">
         <h4>Tools</h4>
-        Node, Express, MongoDB, React, Redux,
-        Wordpress, PHP, Apache, Sage, Gatsby, Prismic.io, GraphQL, Slim, Ruby on Rails, CSS3, HTML5, JavaScript, Git, Grunt,
-        Processing, p5.js, Photoshop, Sketch,  Object
-        Oriented Programming.
-        <br></br>I am always open to learning new frameworks or languages, I am
-        currently studying Laravel and Angular.
+        Node,{" "} Express,{" "} MongoDB,{" "} React,{" "} Redux,{" "}
+        Wordpress,{" "} PHP,{" "} Apache,{" "} Sage,{" "} Gatsby,{" "} Prismic.io,{" "} GraphQL,{" "} The Slim Framework,{" "} Ruby on Rails,{" "} CSS3,{" "} HTML5,{" "} JavaScript,{" "} Git,{" "} Grunt,{" "}
+        Processing{" "}, p5.js{" "}, Photoshop{" "}, Sketch{" "},  Object
+        Oriented Programming.{" "}
+        <p>  I am always open to learning new frameworks or languages, I am
+          currently focusing on more advanced React concepts.</p>
+
       </div>
       <div className="section">
       <h4>Clients</h4>
+
         <div className="clients item">
           <a
             href="https://www.mexicansummer.com/"

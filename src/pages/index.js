@@ -5,15 +5,15 @@ import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Projects from "../components/projects"
 import About from "../components/about"
-// import Slideshow from "../components/slideshow"
 import Landing from "../components/landing"
 import SEO from "../components/seo"
+
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: { fields: [frontmatter___date], order: DESC }
+        sort: { fields: [frontmatter___date], order: ASC }
         filter: { frontmatter: { featured: { eq: true } } }
       ) {
         totalCount

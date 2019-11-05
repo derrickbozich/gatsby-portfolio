@@ -1,7 +1,4 @@
 .home {
-  // .container{
-  //   padding: 0 1rem !important;
-  // }
   .landing {
     div {
       font-size: 1.5rem;
@@ -12,10 +9,7 @@
 
     .wrap {
       position: relative;
-      // margin-left: 0.5rem;
-      // @media (min-width: $bp-mobile) {
-      //   margin-left: 0;
-      // }
+
       .sinwav {
         position: absolute;
         top: -7vw;
@@ -29,18 +23,9 @@
         @media (min-width: $bp-mobile) {
           visibility: visible;
         }
-        // outline: 2px solid black;
       }
     }
 
-    // .p5Canvas {
-    //   position: absolute;
-    //   // outline: 2px solid black;
-    //   right: 7%;
-    //   top: 5%;
-    // }
-
-    // height: 100vh;
     padding: 30vh 0 60vh;
   }
 
@@ -50,36 +35,32 @@
   }
 
   .about {
+    padding: 0 1rem;
     margin: 2rem 0;
-
-    @media (min-width: $bp-mobile) {
-      margin: 8rem 0;
-    }
-    // background-color: #74B6F5;
-    // h3 {
-    //   font-size: 3rem;
-    //   @media (min-width: $bp-mobile) {
-    //     font-size: 4rem;
-    //   }
-    // }
-    .section {
-      margin-bottom: 2rem;
-    }
+    font-size: 1.3rem;
 
     a {
       text-decoration: underline;
 
       &:hover {
-        color: $black;
+        color: black;
+        font-weight: bold;
       }
     }
+
+    @media (min-width: $bp-mobile) {
+      margin: 8rem 0;
+      font-size: 1rem;
+      padding: 0 ;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
     .clients {
       a {
-        margin-bottom: 0.3rem;
         display: block;
-        @media (min-width: $bp-mobile) {
-          margin-bottom: 0;
-        }
       }
     }
   }

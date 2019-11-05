@@ -1,52 +1,9 @@
 import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
-// import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import P5Wrapper from "react-p5-wrapper"
 import sketch from "../sketches/sketch"
-// import { FaAngleDoubleRight } from "react-icons/fa"
-// import { FaAngleDoubleLeft } from "react-icons/fa"
 import useWindowSize from "../helpers/useWindowSize"
-
-// import Image from "../components/image"
-
-// <BackgroundImage
-//   fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-//   className="image"
-//   style={{
-//     backgroundPosition: "center top",
-//   }}
-// />
-//
-// <div className="project-wrap">
-//   <h4>Ariel Pink</h4>
-//   <P5Wrapper sketch={sketch}></P5Wrapper>
-// </div>
-
-// {data.allMarkdownRemark.edges.map(({ node }, index) => (
-//   <div key={node.id} className="project">
-//     <Link to={node.fields.slug} className="header">
-//       {" "}
-//       <h4>{node.frontmatter.title}</h4>
-//     </Link>
-//     <Link to={node.fields.slug}>
-//       <BackgroundImage
-//         fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
-//         className="image"
-//         style={{
-//           backgroundPosition: "center top",
-//         }}
-//       />
-//       <P5Wrapper
-//         className="canvas"
-//         sketch={sketch}
-//         color={"blue"}
-//       ></P5Wrapper>
-//     </Link>
-//
-//     <p className="excerpt">{node.excerpt}</p>
-//   </div>
-// ))}
 
 const Projects = ({ data, className, id }) => {
   const [index, setIndex] = useState(0)
@@ -74,13 +31,7 @@ const Projects = ({ data, className, id }) => {
 
   const currentPosts = size.width >= 768 ? [prev, node, next] : posts
 
-  const totalDots = Math.ceil(posts.length / currentPosts)
-
-  // const onButtonClick = () => {
-  //   // `current` points to the mounted text input element
-  //   resizeCanvas()
-  //
-  // }
+  // const totalDots = Math.ceil(posts.length / currentPosts)
 
   const resizeCanvas = () => {
     if (projectEl.current === null) {
@@ -88,7 +39,6 @@ const Projects = ({ data, className, id }) => {
       return
     } else {
       const dimensions = projectEl.current.getBoundingClientRect()
-      // console.log(`dimensions: ${dimensions.width}`)
       setCanvasWidth(dimensions.width)
       setCanvasHeight(dimensions.height)
     }
@@ -99,13 +49,6 @@ const Projects = ({ data, className, id }) => {
     resizeCanvas()
   }, [size.width])
 
-
-
-  // const currentPosts = data.allMarkdownRemark.edges;
-  // console.log(`next ${next}`)
-  // console.log(`posts ${JSON.stringify(posts, null, 2)}`);
-
-  //     <button onClick={resizeCanvas}>Focus the input</button>
   return (
     <div className={className} id={id}>
       <div className="container">
