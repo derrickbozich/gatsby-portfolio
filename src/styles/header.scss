@@ -1,12 +1,14 @@
 header {
   nav.navbar {
     //Brand
+    align-items: center;
     .navbar-brand {
       a {
         &:hover {
           color: black;
         }
         h4 {
+          margin-bottom: 0;
           &:hover {
             color: black;
           }
@@ -15,10 +17,11 @@ header {
     }
 
     button.navbar-toggler {
+      padding: 0;
       .navbar-toggler-icon {
         background-image: url('../images/bars.svg');
         width: 30px;
-        height: 40px;
+        height: 30px;
         border: 0px;
       }
       border: 0px solid black;
