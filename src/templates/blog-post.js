@@ -32,7 +32,7 @@ export default ({data, pageContext}) => {
             />
           </Link>
         )}
-        <div className="text-wrap">
+        <div className="text-wrap box">
           <h3 className="header">{post.frontmatter.title}</h3>
 
           <div dangerouslySetInnerHTML={{__html: post.html}} />
@@ -44,7 +44,7 @@ export default ({data, pageContext}) => {
             <div className="explore">Explore the Site</div>
           </a>
         </div>
-        <div className="image-wrap">
+        <div className="image-wrap box">
           <div className="image-wrap-2">
             <a
               href={post.frontmatter.href}

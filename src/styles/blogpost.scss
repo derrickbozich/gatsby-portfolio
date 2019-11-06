@@ -7,7 +7,6 @@ $arrow-break: 1161px;
   flex-wrap: wrap;
 
   @media (min-width: $bp-mobile) {
-    // min-height: 100vh;
     padding-bottom: 6rem;
   }
 
@@ -39,11 +38,17 @@ $arrow-break: 1161px;
     }
   }
 
+  .box {
+    @media (min-width: 390px) {
+      min-width: 390px;
+    }
+    min-width: 300px;
+  }
+
   .text-wrap {
     flex: 1;
     padding-right: 2em;
     padding-bottom: 2rem;
-    min-width: 390px;
 
     @media (min-width: $bp-mobile) {
       padding-bottom: 0rem;
@@ -68,7 +73,7 @@ $arrow-break: 1161px;
         color: black;
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
         bottom: -3px;
@@ -81,13 +86,12 @@ $arrow-break: 1161px;
 
   .image-wrap {
     flex: 1;
-    min-width: 390px;
-    // min-width: $min-width;
 
     .image-fill {
-      height: 500px;
+      @media (min-width: $bp-mobile) {
+        height: 500px;
+      }
+      height: 400px;
     }
-
-
   }
 }
