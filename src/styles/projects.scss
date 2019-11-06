@@ -2,9 +2,86 @@
   min-height: 100vh;
 
   h3 {
-    margin: 1rem 0 3rem;
+    padding: 1rem 1rem 3rem;
     @media (min-width: $bp-mobile) {
-      margin: 3rem 0;
+      padding: 3rem 0;
+    }
+  }
+
+  .projects-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 2rem;
+
+    @media (min-width: $bp-mobile) {
+    }
+
+    .project {
+      position: relative;
+
+      width: 100%;
+      flex: 0 0 1;
+      padding-bottom: 2rem;
+      color: black;
+
+      @media (min-width: 0px) and (max-width: 350px) {
+        max-height: 260px;
+      }
+
+      @media (min-width: $bp-mobile) {
+        // min-width: 200px;
+        // min-height: 450px;
+        max-height: 400px;
+        width: 33.3%;
+        padding-bottom: 0rem;
+        // min-height: 200px;
+      }
+
+      canvas {
+        position: absolute !important;
+        z-index: 2;
+        top: 0;
+      }
+
+      a.header {
+        position: absolute;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        text-align: center;
+        &:hover {
+          color: black;
+        }
+
+        h4 {
+          font-weight: bold;
+        }
+      }
+
+      .excerpt {
+        display: none;
+      }
+
+      .image {
+        height: 400px;
+        opacity: 0.3;
+        visibility: hidden;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 45%;
+    }
+
+    .prev {
+      left: -5vw;
+    }
+    .next {
+      right: -5vw;
     }
   }
 
@@ -33,85 +110,6 @@
       &:after {
         background-color: black;
       }
-    }
-  }
-
-  .projects-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    margin-bottom: 2rem;
-
-    @media (min-width: $bp-mobile) {
-    }
-
-    .project {
-      position: relative;
-
-      width: 100%;
-      flex: 0 0 1;
-      padding-bottom: 2rem;
-      color: black;
-
-      @media (min-width: 0px )  and (max-width: 350px) {
-        max-height: 300px;
-      }
-
-      @media (min-width: $bp-mobile) {
-        // min-width: 200px;
-        // min-height: 450px;
-        max-height: 400px;
-        width: 33.3%;
-        padding-bottom: 0rem;
-        // min-height: 200px;
-      }
-
-      canvas {
-        position: absolute !important;
-        z-index: 2;
-        top: 0;
-      }
-
-      a.header {
-        position: absolute;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 3;
-        text-align: center;
-        &:hover{
-          color: black;
-        }
-
-        h4 {
-          font-weight: bold;
-
-
-        }
-      }
-
-      .excerpt {
-        display: none;
-      }
-
-      .image {
-        height: 400px;
-        opacity: 0.3;
-        visibility: hidden;
-      }
-    }
-
-    svg {
-      position: absolute;
-      top: 45%;
-    }
-
-    .prev {
-      left: -5vw;
-    }
-    .next {
-      right: -5vw;
     }
   }
 }
