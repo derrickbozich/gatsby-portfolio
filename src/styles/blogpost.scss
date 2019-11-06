@@ -1,40 +1,60 @@
 $arrow-break: 1161px;
 .blog-post {
-  padding: 4rem 1rem 5rem;
+  padding: 4rem 1rem 0rem;
   max-width: 960px !important;
   position: relative;
   display: flex;
   flex-wrap: wrap;
 
   @media (min-width: $bp-mobile) {
-    padding-bottom: 6rem;
+    // padding-bottom: 6rem;
   }
 
-  svg {
-    cursor: pointer;
-    position: absolute;
-    top: 92%;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.05);
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    // outline: 2px solid black;
+    // padding: 2rem 0;
+    padding: 2rem 0;
+
     @media (min-width: $arrow-break) {
-      top: 50%;
+      display: block;
+      svg {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+      }
+      .next {
+        right: 1rem;
+        @media (min-width: $arrow-break) {
+          top: 50%;
+          right: -10%;
+        }
+      }
+      .previous {
+        left: 1rem;
+        @media (min-width: $arrow-break) {
+          left: -10%;
+          top: 50%;
+        }
+      }
+
     }
-  }
-  .next {
-    right: 1rem;
-    @media (min-width: $arrow-break) {
-      top: 50%;
-      right: -10%;
+    svg {
+
+      height: 50px;
+      width: 50px;
+      border: 1px solid black;
+      border-radius: 4px;
+      background-color: rgba(255, 255, 255, 0.05);
+
     }
-  }
-  .previous {
-    left: 1rem;
-    @media (min-width: $arrow-break) {
-      left: -10%;
-      top: 50%;
+    .next {
+
+    }
+    .previous {
+
     }
   }
 

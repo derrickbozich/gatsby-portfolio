@@ -17,21 +17,6 @@ export default ({data, pageContext}) => {
     <Layout home={false}>
       <SEO title={post.frontmatter.title} />
       <div className="blog-post container">
-        {next && (
-          <Link to={next.fields.slug}>
-            <FaAngleDoubleRight className="next" color="black" size={32} />
-          </Link>
-        )}
-        {prev && (
-          <Link to={prev.fields.slug}>
-            <FaAngleDoubleLeft
-              className="previous"
-              color="black"
-              size={32}
-              // onClick={previousPost}
-            />
-          </Link>
-        )}
         <div className="text-wrap box">
           <h3 className="header">{post.frontmatter.title}</h3>
 
@@ -65,7 +50,26 @@ export default ({data, pageContext}) => {
           </div>
         </div>{' '}
         {/*.image-wrap */}
+        <div className="buttons">
+
+          {prev && (
+            <Link to={prev.fields.slug}>
+              <FaAngleDoubleLeft
+                className="previous"
+                color="black"
+                size={32}
+                // onClick={previousPost}
+              />
+            </Link>
+          )}
+          {next && (
+            <Link to={next.fields.slug}>
+              <FaAngleDoubleRight className="next" color="black" size={32} />
+            </Link>
+          )}
+        </div>
       </div>
+
       {/*.blog-post */}
     </Layout>
   )
