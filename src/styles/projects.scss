@@ -2,7 +2,8 @@
   min-height: 100vh;
 
   h3 {
-    padding: 1rem 1rem 3rem;
+    // padding-left: 1rem;
+    margin-bottom: 0;
     @media (min-width: $bp-mobile) {
       padding: 3rem 0;
     }
@@ -19,18 +20,18 @@
 
     .project {
       position: relative;
-
       width: 100%;
       flex: 0 0 1;
-      padding-bottom: 2rem;
+        max-height: 300px;
+      // padding-bottom: 2rem;
       color: black;
 
-      @media (min-width: 0px) and (max-width: 350px) {
-        max-height: 240px;
-      }
+      // @media (min-width: 0px) and (max-width: 350px) {
+      //   max-height: 240px;
+      // }
 
       @media (min-width: $bp-mobile) {
-        max-height: 400px;
+        // max-height: 400px;
         width: 33.3%;
         padding-bottom: 0rem;
       }

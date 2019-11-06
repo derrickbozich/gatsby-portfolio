@@ -1,5 +1,6 @@
 header {
   nav.navbar {
+    padding: 1rem;
     //Brand
     align-items: center;
     .navbar-brand {
@@ -17,6 +18,7 @@ header {
     }
 
     button.navbar-toggler {
+      border-radius: 0;
       padding: 0;
       .navbar-toggler-icon {
         background-image: url('../images/bars.svg');
@@ -28,6 +30,7 @@ header {
     }
 
     button.navbar-toggler.collapsed {
+      border-radius: 0;
       padding: 0;
     }
 
