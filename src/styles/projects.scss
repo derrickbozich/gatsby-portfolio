@@ -3,9 +3,10 @@
 
   h3 {
 // padding-left: 1rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
     @media (min-width: $bp-mobile) {
       padding: 3rem 0;
+      margin-bottom: 0rem;
     }
   }
 
