@@ -2,16 +2,10 @@ $bp-mobile: 768px;
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  // -webkit-animation: pulse 80s infinite alternate;
-  // -moz-animation: pulse_m 80s infinite alternate;
-  // background-color: #ff0000;
 
   body {
-    // -webkit-animation: pulse 80s infinite alternate;
-    // -moz-animation: pulse_m 80s infinite alternate;
-    // background-color: #ff0000;
-    .layout{
-      -webkit-animation: pulse 80s infinite  alternate;
+    .layout {
+      -webkit-animation: pulse 80s infinite alternate;
       -moz-animation: pulse_m 80s infinite alternate;
       background-color: #ff0000;
     }
@@ -20,6 +14,7 @@ html {
   p {
     // color: white;
   }
+
   h3 {
     font-size: 2.5rem;
     // margin-bottom: 5rem;
@@ -36,32 +31,33 @@ html {
     }
   }
 }
+
 /*Animation Prefs*/
 @-webkit-keyframes pulse {
   0% {
-    background-color: #ff0000;
-  }
-  13% {
     background-color: #ff9966;
   }
-  26% {
+  13% {
     background-color: #ff8200;
   }
-  39% {
+  26% {
     background-color: #ffff66;
   }
-  52% {
+  39% {
     background-color: #99ff66;
   }
-  65% {
+  52% {
     background-color: #00ff00;
   }
-  78% {
+  65% {
     background-color: #00ccff;
   }
 
-  91% {
+  78% {
     background-color: #ff9999;
+  }
+  91% {
+    background-color: #ff0000;
   }
   100% {
     background-color: #ff0000;
@@ -70,29 +66,29 @@ html {
 
 @-moz-keyframes pulse_m {
   0% {
-    background-color: #ff0000;
-  }
-  13% {
     background-color: #ff9966;
   }
-  26% {
+  13% {
     background-color: #ff8200;
   }
-  39% {
+  26% {
     background-color: #ffff66;
   }
-  52% {
+  39% {
     background-color: #99ff66;
   }
-  65% {
+  52% {
     background-color: #00ff00;
   }
-  78% {
+  65% {
     background-color: #00ccff;
   }
 
-  91% {
+  78% {
     background-color: #ff9999;
+  }
+  91% {
+    background-color: #ff0000;
   }
   100% {
     background-color: #ff0000;

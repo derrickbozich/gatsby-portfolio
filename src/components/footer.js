@@ -25,14 +25,14 @@ const Footer = ({ siteTitle, email }) => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <AiOutlineMail color="white" size={32} />
+          <AiOutlineMail color="white" size={35} />
         </a>
         <a
           href="https://github.com/derrickbozich"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaGithub color="white" size={32} />
+          <FaGithub color="white" size={35} />
         </a>
       </div>
     </div>

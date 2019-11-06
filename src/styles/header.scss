@@ -1,24 +1,21 @@
 header {
   nav.navbar {
-
     //Brand
     .navbar-brand {
-
-      a{
-        &:hover{
+      a {
+        &:hover {
           color: black;
         }
-        h4{
-          &:hover{
+        h4 {
+          &:hover {
             color: black;
           }
         }
       }
-
     }
 
-    button.navbar-toggler{
-      .navbar-toggler-icon{
+    button.navbar-toggler {
+      .navbar-toggler-icon {
         background-image: url('../images/bars.svg');
         width: 30px;
         height: 40px;
@@ -27,9 +24,11 @@ header {
       border: 0px solid black;
     }
 
+    button.navbar-toggler.collapsed {
+      padding: 0;
+    }
 
     #responsive-navbar-nav {
-
       .navbar-nav {
         a {
           margin-left: 1rem;
@@ -39,7 +38,6 @@ header {
           @media (min-width: $bp-mobile) {
             font-size: 1rem;
           }
-
         }
         a:hover {
           text-decoration: underline;

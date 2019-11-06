@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
+import React from 'react'
+import {graphql, Link} from 'gatsby'
+import Layout from '../components/layout'
 // import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
-import SEO from "../components/seo"
-import { FaAngleDoubleRight } from "react-icons/fa"
-import { FaAngleDoubleLeft } from "react-icons/fa"
+import BackgroundImage from 'gatsby-background-image'
+import SEO from '../components/seo'
+import {FaAngleDoubleRight} from 'react-icons/fa'
+import {FaAngleDoubleLeft} from 'react-icons/fa'
 
-export default ({ data, pageContext }) => {
-  const { next, prev } = pageContext
+export default ({data, pageContext}) => {
+  const {next, prev} = pageContext
   let post = data.markdownRemark
 
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
@@ -17,10 +17,25 @@ export default ({ data, pageContext }) => {
     <Layout home={false}>
       <SEO title={post.frontmatter.title} />
       <div className="blog-post container">
+        {next && (
+          <Link to={next.fields.slug}>
+            <FaAngleDoubleRight className="next" color="black" size={32} />
+          </Link>
+        )}
+        {prev && (
+          <Link to={prev.fields.slug}>
+            <FaAngleDoubleLeft
+              className="previous"
+              color="black"
+              size={32}
+              // onClick={previousPost}
+            />
+          </Link>
+        )}
         <div className="text-wrap">
           <h3 className="header">{post.frontmatter.title}</h3>
 
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div dangerouslySetInnerHTML={{__html: post.html}} />
           <a
             href={post.frontmatter.href}
             target="_blank"
@@ -39,33 +54,16 @@ export default ({ data, pageContext }) => {
               <BackgroundImage
                 fluid={featuredImgFluid}
                 style={{
-                  backgroundPosition: "center top",
-                  backgroundSize: "cover",
-                  className: "image",
+                  backgroundPosition: 'center top',
+                  backgroundSize: 'cover',
+                  className: 'image',
                 }}
               >
                 <div className="image-fill"> </div>
               </BackgroundImage>
             </a>
-
-            {next && (
-              <Link to={next.fields.slug}>
-                <FaAngleDoubleRight className="next" color="black" size={32} />
-              </Link>
-            )}
-
-            {prev && (
-              <Link to={prev.fields.slug}>
-                <FaAngleDoubleLeft
-                  className="previous"
-                  color="black"
-                  size={32}
-                  // onClick={previousPost}
-                />
-              </Link>
-            )}
           </div>
-        </div>{" "}
+        </div>{' '}
         {/*.image-wrap */}
       </div>
       {/*.blog-post */}
@@ -75,7 +73,7 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query PostQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: {slug: {eq: $slug}}) {
       html
       frontmatter {
         title

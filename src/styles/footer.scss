@@ -13,11 +13,19 @@ footer.wrap {
   .header {
     margin-bottom: 1rem;
     font-weight: bold;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 1.6rem;
+    }
   }
   .email {
     color: white;
-    // text-decoration: none;
     margin-bottom: 2rem;
+    font-size: 1.3rem;
+
+    @media (min-width: $bp-mobile) {
+      font-size: 1.2rem;
+    }
   }
   .icons {
     svg {
