@@ -26,7 +26,7 @@ export default ({data, pageContext}) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="explore">Explore the Site</div>
+            <div className="explore">EXPLORE THE SITE</div>
           </a>
         </div>
         <div className="image-wrap box">
