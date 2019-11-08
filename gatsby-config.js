@@ -4,9 +4,11 @@ module.exports = {
     description: `Derrick Bozich || Full Stack Developer`,
     author: `Derrick Bozich`,
     email: `dbozich1@gmail.com`,
+    siteUrl: `https://www.derrickbozich.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
