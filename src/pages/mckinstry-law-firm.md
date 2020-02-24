@@ -1,8 +1,8 @@
 ---
 title: "The McKinstry Law Firm"
 date: "2019-05-01"
-featuredImage: ../images/slides/mckinstry.jpg
+featuredImage: ../images/slides/mckinstry.png
 featured: true
 href: https://www.mckinstrylawfirm.com/
 ---
-A page for the McKinstry Law Firm. This is the first professional project I did with Gatsby, an incredible framework for making static web pages.
+A page for the McKinstry Law Firm. I made this page with Gatsby, an incredible framework for making modern web pages.
