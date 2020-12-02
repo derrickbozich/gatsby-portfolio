@@ -50,6 +50,13 @@ const About = () => (
         <h4>Clients</h4>
 
         <div className="clients item">
+        <a
+          href="https://www.cactusinc.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cactus
+        </a>
           <a
             href="https://www.mexicansummer.com/"
             target="_blank"
@@ -57,6 +64,7 @@ const About = () => (
           >
             Mexican Summer
           </a>
+
           <a
             href="https://www.dominomusic.com/us"
             target="_blank"
