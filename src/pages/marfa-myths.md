@@ -1,6 +1,6 @@
 ---
 title: "Marfa Myths"
-date: "2019-02-01"
+date: "2019-03-01"
 featuredImage: ../images/slides/myths-2.jpg
 featured: true
 href: https://marfamyths.com/

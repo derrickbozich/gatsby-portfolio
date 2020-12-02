@@ -58,18 +58,18 @@ const About = () => (
             Mexican Summer
           </a>
           <a
-            href="https://www.mosspinkflora.com/"
+            href="https://www.dominomusic.com/us"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Moss Pink Flora
+            Domino Records
           </a>
           <a
-            href="http://citylaxdenver.org/"
+            href="https://www.cactusinc.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Denver CityLAX
+            Cactus Inc.
           </a>
           <a
             href="https://multidim.net/"
