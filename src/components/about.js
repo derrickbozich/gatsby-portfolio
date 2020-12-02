@@ -19,28 +19,19 @@ const About = () => (
         >
           The Flatiron School
         </a>{' '}
-        (NYC). I work with{' '}
-        <a
-          className="link"
-          href="http://tommetzmedia.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Tom Metz Media
-        </a>
-        , assisting with projects and do solo work as well. I love the process of
-        learning, collaboration and doing quality work. I am looking to
-        work with more clients and expand my portfolio. Please feel free to
+        (NYC). These days, I spend most of my time working with creative agencies, musicians, small businesses and non-profit organizations. I love the process of
+        learning, collaboration and doing quality work. Please feel free to
         contact me, I would love to help you with your project.
       </div>
       <div className="section">
         <h4>Tools</h4>
         Node, Express, MongoDB, React, Redux, Wordpress, PHP, Apache, Sage,{' '}
-        Gatsby, Prismic.io, GraphQL, The Slim Framework, Ruby on Rails, CSS3,{' '}
+        Gatsby, Prismic.io, GraphQL, Spotify API, The Slim Framework, Ruby on Rails, CSS3,{' '}
         HTML5, JavaScript, Git, Grunt, Processing , p5.js , Photoshop , Sketch ,
         Object Oriented Programming.{' '}
         <p>
           {' '}
+          <br />
           I am always learning new frameworks, languages, coding practices or
           strengthening my knowledge of what I am already familiar with. Right
           now, I am focusing on learning more advanced React concepts.
@@ -55,7 +46,7 @@ const About = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          Cactus
+          Cactus Inc.
         </a>
           <a
             href="https://www.mexicansummer.com/"
@@ -72,27 +63,8 @@ const About = () => (
           >
             Domino Records
           </a>
-          <a
-            href="https://www.cactusinc.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Cactus Inc.
-          </a>
-          <a
-            href="https://multidim.net/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Multidim Recordings
-          </a>
-          <a
-            href="https://coloradocider.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Colorado Cider
-          </a>
+
+
         </div>
       </div>
     </div>
