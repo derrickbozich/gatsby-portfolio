@@ -20,7 +20,7 @@ const Projects = ({data, className, id}) => {
     size.width >= 768 ? posts.slice(index, index + dotCount) : posts
   const [currentPosts, setCurrentPosts] = useState(initialPosts)
 
-  const length = posts.length - 1
+  // const length = posts.length - 1
   const handleDot = i => {
     setDotIndex(Math.floor(i / totalDots))
     setIndex(i)
@@ -99,12 +99,13 @@ const Projects = ({data, className, id}) => {
   useEffect(() => {
     resizeCanvas()
     size.width >= 768 ? setCurrentPosts(posts.slice(index, index + dotCount)) : setCurrentPosts(posts)
-  }, [size.width])
+  }, [size.width, index, posts])
 
   return (
     <div className={className} id={id}>
       <div className="container">
         <h3>Portfolio</h3>
+        <div>Click on a blob to explore a project.</div>
 
         <div className="projects-wrap">{currentPostsMapped}</div>
         {size.width > 768 ? dots : ''}
