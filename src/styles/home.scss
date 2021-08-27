@@ -2,9 +2,9 @@
     .landing {
         div {
             font-size: 1.5rem;
+            font-weight: 300;
             @media (min-width: $bp-mobile) {
                 font-size: 2rem;
-                font-weight: 300;
             }
             line-height: 1.2rem;
         }

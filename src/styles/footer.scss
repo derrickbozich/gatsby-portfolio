@@ -1,35 +1,31 @@
 footer.wrap {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: black;
-  color: white;
-  padding: 5rem;
-
-  @media (min-width: $bp-mobile) {
-    padding: 8rem;
-  }
-
-  .header {
-    margin-bottom: 1rem;
-    font-weight: bold;
-
-    @media (min-width: $bp-mobile) {
-      font-size: 1.6rem;
-    }
-  }
-  .email {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
     color: white;
-    margin-bottom: 2rem;
-    font-size: 1.3rem;
-
+    padding: 5rem;
     @media (min-width: $bp-mobile) {
-      font-size: 1.2rem;
+        padding: 8rem;
     }
-  }
-  .icons {
-    svg {
-      margin-right: 15px;
+    .header {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        @media (min-width: $bp-mobile) {
+            font-size: 1.9rem;
+        }
     }
-  }
+    .email {
+        color: white;
+        margin-bottom: 2rem;
+        font-size: 1.3rem;
+        @media (min-width: $bp-mobile) {
+            font-size: 1.2rem;
+        }
+    }
+    .icons {
+        svg {
+            margin-right: 15px;
+        }
+    }
 }
