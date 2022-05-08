@@ -1,9 +1,11 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+// custom typefaces
+// import "typeface-montserrat"
+// import "typeface-merriweather"
+// normalize CSS across browsers
+import "./src/normalize.css"
+// custom CSS styles
+import "./src/style.css"
+import "./src/stylesheets/autoload/slick-carousel.scss";
 
-// You can delete this file if you're not using it
-
-import "./src/styles/global.scss"
+// Highlighting for code blocks
+import "prismjs/themes/prism.css"

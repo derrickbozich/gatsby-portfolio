@@ -1,0 +1,71 @@
+/* CSS Custom Properties Definitions */
+
+
+/* HTML elements */
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* margin: 0; */
+    animation: pulse 80s infinite alternate;
+    background-color: #ff0000;
+    overflow-x: hidden;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    /* text-decoration: underline; */
+    color: inherit;
+    /* color: black; */
+}
+
+p {
+    margin-top: 0;
+}
+
+
+/*Animation Prefs*/
+
+@keyframes pulse {
+    0% {
+        background-color: #ff9966;
+    }
+    13% {
+        background-color: #ff8200;
+    }
+    26% {
+        background-color: #ffff66;
+    }
+    39% {
+        background-color: #99ff66;
+    }
+    52% {
+        background-color: #00ff00;
+    }
+    65% {
+        background-color: #00ccff;
+    }
+    78% {
+        background-color: #ff9999;
+    }
+    91% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: #ff0000;
+    }
+}

@@ -1,71 +1,127 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
-import Navbar from "react-bootstrap/Navbar"
-// import NavDropdown from "react-bootstrap/NavDropdown"
-import Nav from "react-bootstrap/Nav"
-import { FaGithub } from "react-icons/fa"
+/**
+ * Bio component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-// <svg width="400" height="110">
-//   <rect
-//     width="300"
-//     height="100"
-//     style={{
-//       fill:'red'
-//     }}
-//   />
-// </svg>
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Container from "@mui/material/Container"
+import Box from "@mui/material/Box"
+import List from "@mui/material/List"
+import ListItem from "@mui/material/ListItem"
+import Typography from "@mui/material/Typography"
+import { Link } from "gatsby-theme-material-ui"
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-const Header = ({ siteTitle, home }) => {
-  return (
-    <header>
-      <Navbar collapseOnSelect expand="md">
-        <Navbar.Brand>
-          <Link to="/">{home ? "" : <h4>Derrick Bozich</h4>}</Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto">
-            {home ? (
-              <a href="/#portfolio">Portfolio</a>
-            ) : (
-              <Link to="/#portfolio">
-                <div>Portfolio</div>
-              </Link>
-            )}
+const Header = ({ location }) => {
+    const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+          }
+        }
+      }
+    }
+  `)
 
-            {home ? (
-              <a href="/#about">About</a>
-            ) : (
-              <Link to="/#about">
-                <div>About</div>
-              </Link>
-            )}
+    // Set these values by editing "siteMetadata" in gatsby-config.js
+    const rootPath = `${__PATH_PREFIX__}/`
+    // const rootPath = `/`
+    const isRootPath = location?.pathname === rootPath
 
-            {home ? (
-              <a href="/#contact">Contact</a>
-            ) : (
-              <Link to="/#contact">
-                <div>Contact</div>
-              </Link>
-            )}
+    const navItems = [
+        {
+            to: '/#portfolio',
+            title: "Portfolio",
+            icon: false,
+            external: false
+        },
+        {
+            to: '/#about',
+            title: "About",
+            icon: false,
+            external: false
+        },
+        {
+            to: '/#contact',
+            title: "Contact",
+            icon: false,
+            external: false
+        },
+        {
+            to: 'https://github.com/derrickbozich',
+            title: "Contact",
+            icon: <GitHubIcon sx={{ fontSize: '35px', color: 'black', paddingTop: '5px' }} />,
+            external: true
+        }
+    ]
 
-            <a href="https://github.com/derrickbozich" target="_blank" rel="noopener noreferrer">
-              <FaGithub color="black" size={32} />
-            </a>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-    </header>
-  )
-}
+    return (
+        <Container as='header' maxWidth={false} sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center' }} >
+            <Box flexBasis={["100%", null, "50%"]}>
+                {
+                    !isRootPath &&
+                    <Link href={'/'} sx={{textDecoration:'none'}} >
+                        <Typography variant='brand' color='black'>
+                            Derrick Bozich
+                        </Typography>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+                    </Link>
+                }
+            </Box>
 
-Header.defaultProps = {
-  siteTitle: ``,
+            <List
+                sx={{
+                    flexBasis: ["100%", null, "50%"],
+                    display: "flex",
+                    gap: "20px",
+                    justifyContent: 'flex-end',
+                    alignItems: "center",
+                    listStyle: 'none'
+                }}
+            >
+                {navItems.map((item, i) => {
+                    if (item.external) {
+                        return (
+                            <ListItem key={i} sx={{ display: 'inline-flex', width: 'auto', padding: 0 }}  >
+                                <a href={item.to} target="_blank" rel="noopener noreferrer">
+                                    {
+                                        item.icon && item.icon
+                                    }
+
+                                </a>
+                            </ListItem >
+
+                        )
+                    }
+                    return (
+                        <ListItem key={i}  sx={{ display: 'inline-flex', width: 'auto', }} disablePadding>
+                            <Link href={item.to} color='primary.dark' sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}   >
+                                <Typography variant='nav' as='p'>
+                                    {item.title}
+                                </Typography>
+                            </Link>
+                        </ListItem >
+
+                    )
+                })}
+
+            </List>
+
+
+
+
+
+        </Container>
+    )
 }
 
 export default Header
